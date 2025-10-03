@@ -27,5 +27,8 @@ jobs:
             npm install
           fi
 
+      - name: Build TypeScript (project references)
+        run: npm run build
+
       - name: Run workspace tests
         run: npm -ws run test

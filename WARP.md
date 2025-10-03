@@ -18,20 +18,19 @@ Common commands
   - PowerShell: npm install
 
 - Build, Lint, Format, Test (repo root):
-  - Current scripts are placeholders:
-    - npm run build → "No build yet"
-    - npm run lint → "No lint yet"
-    - npm run format → "No format yet"
-    - npm test → "No tests yet"
-  - Once apps/packages provide scripts, prefer running them per‑workspace (see below).
+  - Build all workspaces (TypeScript project references):
+    - npm run build
+  - Lint/Format are placeholders for now.
+  - Tests run per workspace (see below).
 
 - Run a script in a specific workspace (examples):
-  - App dev: npm run -w .\apps\ideation-app dev
-  - App tests: npm run -w .\apps\ideation-app test
-  - Core package tests: npm run -w .\packages\core test
-  - Across all workspaces: npm run -ws build
+  - App build/dev: npm run -w .\apps\ideation-app build | dev
+  - App tests: npm run -w .\apps\ideation-app test (ensure core is built or run npm run build at root first)
+  - Core package build/tests: npm run -w .\packages\core build | test
+  - Across all workspaces (build via project refs is at root): npm run build
 
 - Running a single test (Node's built-in test runner is configured):
+  - Build first: npm run build
   - By name (core): npm run -w .\packages\core test -- --test-name-pattern "hello"
   - By name (app): npm run -w .\apps\ideation-app test -- --test-name-pattern "app can import"
   - By file (core): npm run -w .\packages\core test -- test\hello.test.js
