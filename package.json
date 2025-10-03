@@ -1,0 +1,20 @@
+{
+  "name": "superapp-studio",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Tablet-first superapp blending Figma-like ideation, Notion-like docs, and AI code generation.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "echo \"No build yet\"",
+    "lint": "echo \"No lint yet\"",
+    "format": "echo \"No format yet\"",
+    "test": "echo \"No tests yet\""
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
