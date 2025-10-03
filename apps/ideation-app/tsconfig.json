@@ -10,5 +10,8 @@
     "strict": true,
     "skipLibCheck": true
   },
+  "references": [
+    { "path": "../../packages/core" }
+  ],
   "include": ["src"]
 }
